@@ -90,8 +90,11 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_led) {
             texthome.setText("Activation du flash");
+
+
         } else if (id == R.id.nav_son) {
             texthome.setText("Activation du son");
+
         } else if (id == R.id.nav_map) {
             Intent intent = new Intent(this, MapsActivity.class);
             startActivity(intent);
