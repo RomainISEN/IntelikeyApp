@@ -5,6 +5,7 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -19,6 +20,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -40,6 +42,7 @@ public class MainActivity extends AppCompatActivity
     public TextView texthome;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +57,9 @@ public class MainActivity extends AppCompatActivity
 
         texthome = (TextView) findViewById(R.id.textviewhome);
         texthome.setText(" Bienvenue sur Intelikey! ");
+
+
+
 
         btnDis = (Button)findViewById(R.id.buttonDis);
         btnDis.setOnClickListener(new View.OnClickListener()
@@ -124,6 +130,7 @@ public class MainActivity extends AppCompatActivity
                 msg("Error");
             }
             texthome.setText("Activation du flash pendant 10 sec");
+
 
 
         } else if (id == R.id.nav_son) {
