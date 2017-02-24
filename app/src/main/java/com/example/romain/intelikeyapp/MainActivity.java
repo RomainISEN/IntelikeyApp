@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_led) {
             try
             {
-                btSocket.getOutputStream().write("N".toString().getBytes());
+                btSocket.getOutputStream().write("L".toString().getBytes());
             }
             catch (IOException e)
             {
@@ -134,9 +134,32 @@ public class MainActivity extends AppCompatActivity
 
 
         } else if (id == R.id.nav_son) {
+            try {
+                btSocket.getOutputStream().write("S".toString().getBytes());
+            } catch (IOException e) {
+                msg("Error");
+            }
             texthome.setText("Activation du son");
 
+
+        } else if(id == R.id.nav_led_son) {
+            try {
+                btSocket.getOutputStream().write("B".toString().getBytes());
+            } catch (IOException e) {
+                msg("Error");
+            }
+            texthome.setText("Activation du flash et son pendant 10 sec");
+
+
         } else if (id == R.id.nav_map) {
+            try
+            {
+                btSocket.getOutputStream().write("G".toString().getBytes());
+            }
+            catch (IOException e)
+            {
+                msg("Error");
+            }
             Intent intent = new Intent(this, MapsActivity.class);
             startActivity(intent);
 

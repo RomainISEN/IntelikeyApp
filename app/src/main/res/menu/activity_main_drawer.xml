@@ -11,6 +11,10 @@
             android:icon="@drawable/ic_menu_audio"
             android:title="Snoozer" />
         <item
+            android:id="@+id/nav_led_son"
+            android:icon="@drawable/connection"
+            android:title="@string/led_son" />
+        <item
             android:id="@+id/nav_map"
             android:icon="@drawable/ic_menu_map"
             android:title="Map" />
